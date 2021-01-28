@@ -590,6 +590,10 @@ class _FlutterLoginState extends State<FlutterLogin>
                       top: cardTopPosition - headerHeight - headerMargin,
                       child: _buildHeader(headerHeight, loginTheme),
                     ),
+                    Positioned(
+                      bottom: 30,
+                      child: widget.footer,
+                    ),
                   ],
                 ),
               ),
