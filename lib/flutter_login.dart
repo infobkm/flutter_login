@@ -216,6 +216,7 @@ class FlutterLogin extends StatefulWidget {
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
     this.footer,
+    this.header,
     this.logoTag,
     this.titleTag,
     this.showDebugButtons = false,
@@ -257,6 +258,8 @@ class FlutterLogin extends StatefulWidget {
   final Function onSubmitAnimationCompleted;
 
   final Widget footer;
+
+  final Widget header;
 
   /// Hero tag for logo image. If not specified, it will simply fade out when
   /// changing route
@@ -587,8 +590,8 @@ class _FlutterLoginState extends State<FlutterLogin>
                       ),
                     ),
                     Positioned(
-                      top: cardTopPosition - headerHeight - headerMargin,
-                      child: Text((cardTopPosition - headerHeight - headerMargin).toString()),
+                      top: 30,
+                      child: widget.header,
                     ),
                     Positioned(
                       bottom: 30,
