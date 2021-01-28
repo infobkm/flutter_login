@@ -587,7 +587,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                       ),
                     ),
                     Positioned(
-                      top: 10,
+                      top: 5,
                       child: _buildHeader(headerHeight, loginTheme),
                     ),
                     Positioned(
