@@ -588,7 +588,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                     ),
                     Positioned(
                       top: cardTopPosition - headerHeight - headerMargin,
-                      child: widget.footer,
+                      child: Text((cardTopPosition - headerHeight - headerMargin).toString()),
                     ),
                     Positioned(
                       bottom: 30,
