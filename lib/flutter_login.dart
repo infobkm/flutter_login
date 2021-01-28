@@ -215,6 +215,7 @@ class FlutterLogin extends StatefulWidget {
     this.emailValidator,
     this.passwordValidator,
     this.onSubmitAnimationCompleted,
+    this.footer,
     this.logoTag,
     this.titleTag,
     this.showDebugButtons = false,
@@ -254,6 +255,8 @@ class FlutterLogin extends StatefulWidget {
   /// Called after the submit animation's completed. Put your route transition
   /// logic here. Recommend to use with [logoTag] and [titleTag]
   final Function onSubmitAnimationCompleted;
+
+  final Widget footer;
 
   /// Hero tag for logo image. If not specified, it will simply fade out when
   /// changing route
@@ -585,6 +588,10 @@ class _FlutterLoginState extends State<FlutterLogin>
                     ),
                     Positioned(
                       top: cardTopPosition - headerHeight - headerMargin,
+                      child: _buildHeader(headerHeight, loginTheme),
+                    ),
+                    Positioned(
+                      bottom: 50,
                       child: _buildHeader(headerHeight, loginTheme),
                     ),
                   ],
